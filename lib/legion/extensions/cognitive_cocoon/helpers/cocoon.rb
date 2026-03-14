@@ -11,7 +11,7 @@ module Legion
                       :stage, :protection, :created_at
 
           def initialize(cocoon_type:, domain:, content: '', maturity: nil, protection: nil)
-            @id         = SecureRandom.uuid
+            @id = SecureRandom.uuid
             @cocoon_type = cocoon_type.to_sym
             @domain     = domain.to_sym
             @content    = content
@@ -58,18 +58,18 @@ module Legion
 
           def to_h
             {
-              id:          @id,
-              cocoon_type: @cocoon_type,
-              domain:      @domain,
-              content:     @content,
-              maturity:    @maturity.round(10),
-              stage:       @stage,
-              protection:  @protection.round(10),
-              ready:       ready?,
-              premature:   premature?,
+              id:             @id,
+              cocoon_type:    @cocoon_type,
+              domain:         @domain,
+              content:        @content,
+              maturity:       @maturity.round(10),
+              stage:          @stage,
+              protection:     @protection.round(10),
+              ready:          ready?,
+              premature:      premature?,
               maturity_label: Constants.label_for(MATURITY_LABELS, @maturity),
-              age_seconds: age_seconds,
-              created_at:  @created_at.iso8601
+              age_seconds:    age_seconds,
+              created_at:     @created_at.iso8601
             }
           end
 

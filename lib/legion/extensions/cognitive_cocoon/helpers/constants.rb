@@ -22,12 +22,12 @@ module Legion
           }.freeze
 
           MATURITY_LABELS = {
-            (0.9..)      => :fully_gestated,
-            (0.7...0.9)  => :nearly_ready,
-            (0.5...0.7)  => :mid_gestation,
-            (0.3...0.5)  => :early_gestation,
-            (0.1...0.3)  => :just_encapsulated,
-            (..0.1)      => :newly_formed
+            (0.9..)     => :fully_gestated,
+            (0.7...0.9) => :nearly_ready,
+            (0.5...0.7) => :mid_gestation,
+            (0.3...0.5) => :early_gestation,
+            (0.1...0.3) => :just_encapsulated,
+            (..0.1)     => :newly_formed
           }.freeze
 
           def self.label_for(labels, value)
